@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Collections;
 import java.util.List;
 
 public class HomePage {
@@ -50,7 +51,9 @@ public class HomePage {
 	public void addItemsToCart(int numberOfItems) {
 		
         wait.until(ExpectedConditions.elementToBeClickable(allItemsButton)).click();
+        
 		List<WebElement> buttons = driver.findElements(addToCartButtons);
+		Collections.shuffle(buttons);
         for (int i = 0; i < numberOfItems && i < buttons.size(); i++) {
             buttons.get(i).click();
         }
@@ -59,6 +62,7 @@ public class HomePage {
 	
 public void addSingleItemToCart(int itemNumber) {
         List<WebElement> buttons = driver.findElements(addToCartButtons);
+        Collections.shuffle(buttons);
         buttons.get(itemNumber).click();
         
 		

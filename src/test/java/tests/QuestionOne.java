@@ -8,7 +8,7 @@ import utilities.BaseTest;
 public class QuestionOne extends BaseTest {
 
 	@Test
-    public void QuestionTwo() {
+    public void QuestionOne() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("locked_out_user", "secret_sauce");
         String errors = loginPage.getErrorMessage();

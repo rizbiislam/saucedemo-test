@@ -13,7 +13,8 @@ import java.util.List;
 public class CheckoutPage {
     private WebDriver driver;
     private WebDriverWait wait;
-
+    
+    private By backAllProducts = By.xpath("//button[@id = 'back-to-products' and @name ='back-to-products']");
     private By checkoutButton = By.id("checkout");
     private By firstNameField = By.id("first-name");
     private By lastNameField = By.id("last-name");
@@ -23,6 +24,7 @@ public class CheckoutPage {
     private By productPrices = By.cssSelector(".inventory_item_price");
     private By totalPriceLabel = By.className("summary_total_label");
     private By subtotalLabel = By.xpath("//div[@class = 'summary_subtotal_label']");
+    private By finishShoping = By.xpath("//button[@id = 'finish']");
 
     public CheckoutPage(WebDriver driver) {
         this.driver = driver;
@@ -35,9 +37,9 @@ public class CheckoutPage {
 
     public void fillOutCheckoutInfo(String firstName, String lastName, String postalCode) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameField)).sendKeys(firstName);
-        driver.findElement(lastNameField).sendKeys(lastName);
-        driver.findElement(postalCodeField).sendKeys(postalCode);
-        driver.findElement(continueButton).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(lastNameField)).sendKeys(lastName);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(postalCodeField)).sendKeys(postalCode);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(continueButton)).click();
     }
 
     public double calculateTotalPrice() {
@@ -61,5 +63,12 @@ public class CheckoutPage {
 
     public String getItemSubtotal() {
         return driver.findElement(subtotalLabel).getText();
+    }
+    public void finishdShoping() {
+    	wait.until(ExpectedConditions.elementToBeClickable(finishShoping)).click();
+    }
+    
+    public void BackToAll() {
+        wait.until(ExpectedConditions.elementToBeClickable(backAllProducts)).click();
     }
 }

@@ -31,5 +31,10 @@ public class QuestionTwo extends BaseTest {
         System.out.println("\n\nCalculated Total Price: " + calculatedTotal);
         System.out.println("Item Total Price: " + itemSubtotal);
         System.out.println("Displayed Total Price: " + displayedTotal);
+        
+        checkoutPage.finishdShoping();
+        checkoutPage.BackToAll();
+        homePage.resetAppState();
+        loginPage.Logout();
     }
 }

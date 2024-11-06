@@ -34,6 +34,11 @@ public class QuestionThree extends BaseTest {
         Assert.assertTrue(itemSubtotal.contains(String.valueOf(calculatedTotal)), "Item's total price verified successfully.");
         System.out.println("Displayed Total Price: " + displayedTotal);
         System.out.println("Item Total Price: " + itemSubtotal);
+        
+        checkoutPage.finishdShoping();
+        checkoutPage.BackToAll();
+        homePage.resetAppState();
+        loginPage.Logout();
     }
 
 }
