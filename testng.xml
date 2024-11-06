@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="DemoAutomation Suite" verbose="1" parallel="false">
+    <test name="Login Tests">
+        <classes>
+            <class name="tests.QuestionOne"/>
+        </classes>
+    </test>
+    <test name="Standard User Tests">
+        <classes>
+            <class name="tests.QuestionTwo"/>
+        </classes>
+    </test>
+    <test name="Performance Glitch Tests">
+        <classes>
+            <class name="tests.QuestionThree"/>
+        </classes>
+    </test>
+</suite>
