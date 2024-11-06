@@ -45,7 +45,7 @@ This framework is designed for robust automation testing using **Java**. It incl
 
 ---
 
-8. **Generate Allure HTML Report**  
+### 8. **Generate Allure HTML Report**  
    - Run the following command to serve the Allure report:  
      ```bash
      allure serve <path_to_allure_results>
@@ -56,3 +56,10 @@ This framework is designed for robust automation testing using **Java**. It incl
      ```
 
 Enjoy using the SuccessDemo Test Framework!
+
+## 📊 View My Allure HTML Report
+
+Once your tests have run, view the Allure report in your browser:
+
+1. **Automatic Link**  
+   Open this link directly: [Allure Report](http://192.168.43.164:52654/index.html#)
