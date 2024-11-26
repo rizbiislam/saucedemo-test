@@ -1,6 +1,6 @@
 # 🎉 Welcome to the SuccessDemo Test Framework! 🎉
 
--Created an end-to-end test automation framework for the SauceDemo eCommerce website using Selenium WebDriver and TestNG. The framework follows the Page Object Model (POM) for clean, maintainable code and automates key scenarios such as login, product search, cart management, and checkout.
+Created an end-to-end test automation framework for the SauceDemo eCommerce website using Selenium WebDriver and TestNG. The framework follows the Page Object Model (POM) for clean, maintainable code and automates key scenarios such as login, select random products, check products total price, cart management, and checkout.
 
 This framework is designed for robust automation testing using **Java**. It includes:
 - **Selenium** for browser automation
